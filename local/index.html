@@ -5,9 +5,13 @@
         <script src="peopleGen.js"></script>
     </head>
     <body>
-    	<button type="button" onclick="displayPerson();">Generate Person</button>
+        <div>
+            <p>DEBUG</p>
+            <p id="status">IDLE</p>
+        </div>
+        <hr>
+    	<button type="button" onclick="generate();">Start</button>
     	<div>
-            <p id="status"></p>
             <p id="firstname"></p>
             <p id="lastname"></p>
             <p id="type"></p>

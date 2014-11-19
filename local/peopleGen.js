@@ -101,10 +101,19 @@ function randomInterval (min, max) {
 }
 
 
-// !!HERE BE DRAGONS!!
-// EXPERIMENTAL JSON LOADING
-
-// var namePackImport = AJAX_JSON_Req('nonNativeNames.json');
+// LOAD JSON
+function loadJSON(fileName) {
+    var JSONObject = {};
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange=function() {
+        if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+            JSONObject = JSON.parse(xmlhttp.responseText);
+        }
+};
+    xmlhttp.open("GET",fileName,true);
+    xmlhttp.send();
+    return JSONObject;
+}
 
 //MAIN CONSTRUCTOR
 //*****************************************************************************
@@ -209,15 +218,17 @@ var nameData = new NameContainer(namePackImport);
 //USE THAT DATA SOURCE TO CREATE PEOPLE OBJECTS WITH THE PERSON CONSTRUCTOR
 //*****************************************************************************
 
-
-function displayPerson () {
+function generate () {
     if (nameData === undefined) {
-        document.getElementById("status").innerHTML = "nameData is null. can't generate person";
+        document.getElementById("status").innerHTML = "nameData is null. Can't generate person";
         return;
     } else {
-        document.getElementById("status").innerHTML = "nameData is present. generating person";
+        document.getElementById("status").innerHTML = "nameData is present. Generating person";
+        displayPerson();
     }
-    
+}
+
+function displayPerson () {    
     var person1 = new RandomPerson (nameData);
     document.getElementById("firstname").innerHTML = person1.sPrsFirstName;
     document.getElementById("lastname").innerHTML = person1.sPrsLastName;
