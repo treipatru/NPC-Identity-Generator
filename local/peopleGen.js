@@ -102,18 +102,18 @@ function randomInterval (min, max) {
 
 
 // LOAD JSON
-function loadJSON(fileName) {
-    var JSONObject = {};
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange=function() {
-        if (xmlhttp.readyState==4 && xmlhttp.status==200) {
-            JSONObject = JSON.parse(xmlhttp.responseText);
-        }
-};
-    xmlhttp.open("GET",fileName,true);
-    xmlhttp.send();
-    return JSONObject;
-}
+// function loadJSON(fileName) {
+//     var JSONObject = {};
+//     var xmlhttp = new XMLHttpRequest();
+//     xmlhttp.onreadystatechange=function() {
+//         if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+//             JSONObject = JSON.parse(xmlhttp.responseText);
+//         }
+// };
+//     xmlhttp.open("GET",fileName,true);
+//     xmlhttp.send();
+//     return JSONObject;
+// }
 
 //MAIN CONSTRUCTOR
 //*****************************************************************************
@@ -211,25 +211,26 @@ function RandomPerson (dataObject) {
     this.allInfo = [];
 }
 
-//CREATE AN OBJECT WITH THE NAMECONTAINER CONSTRUCTOR LOADING EXTERNAL DATA
+//LOAD EXTERNAL DATA AND CREATE AN OBJECT WITH THE NAMECONTAINER CONSTRUCTOR
 //*****************************************************************************
-var nameData = new NameContainer(namePackImport);
+
 
 //USE THAT DATA SOURCE TO CREATE PEOPLE OBJECTS WITH THE PERSON CONSTRUCTOR
 //*****************************************************************************
 
-function generate () {
+function initData () {
+    nameData = new NameContainer(namePackImport);
+
     if (nameData === undefined) {
-        document.getElementById("status").innerHTML = "nameData is null. Can't generate person";
+        document.getElementById("status").innerHTML = "nameData is null";
         return;
     } else {
-        document.getElementById("status").innerHTML = "nameData is present. Generating person";
-        displayPerson();
+        document.getElementById("status").innerHTML = "nameData is present, creating object.";
     }
 }
 
 function displayPerson () {    
-    var person1 = new RandomPerson (nameData);
+    person1 = new RandomPerson (nameData);
     document.getElementById("firstname").innerHTML = person1.sPrsFirstName;
     document.getElementById("lastname").innerHTML = person1.sPrsLastName;
     document.getElementById("type").innerHTML = person1.sPrsType;
