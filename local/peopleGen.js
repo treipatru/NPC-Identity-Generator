@@ -106,8 +106,11 @@ function randomInterval (min, max) {
 
 //MAIN CONSTRUCTOR
 //*****************************************************************************
-function NameContainer (dataSource) {
+function NameContainer (nameSource, jobSource, charSource) {
     //Initialize Variables
+    this.nameSource = nameSource;
+    this.jobSource = jobSource;
+    this.charSource = charSource;
     this.sPrsType = "";
     this.sPrsGender = "";
     this.sPrsFirstName = "";
@@ -117,17 +120,17 @@ function NameContainer (dataSource) {
     this.sPrsAgeBracket = "";
     this.sPrsJobCat = "";
     this.sPrsJobTitle = "";
-    this.dataSource = dataSource;
+    
 }
 
 //GET PERSON TYPE
 //*********************************
 NameContainer.prototype.generateNameType = function () {
     //Select type of name according to weight of the type
-    var aPeopleTypes = Object.keys(this.dataSource);
+    var aPeopleTypes = Object.keys(this.nameSource);
     aPeopleTypes.pop();
     
-    sPrsType = randomWeighted (aPeopleTypes,this.dataSource.typeWeight);
+    sPrsType = randomWeighted (aPeopleTypes,this.nameSource.typeWeight);
     return(sPrsType);
 };
 
@@ -136,21 +139,21 @@ NameContainer.prototype.generateNameType = function () {
 NameContainer.prototype.generateFullName = function () {
     var iGenderSelector = Math.floor(Math.random() * 10 + 1);
     //Go through all items in the object and look for a type defined as sPrsType
-    for (var key in this.dataSource) {
-        if (this.dataSource.hasOwnProperty(key)) {
+    for (var key in this.nameSource) {
+        if (this.nameSource.hasOwnProperty(key)) {
             if (key === sPrsType) {     
                 //When the type is a match first do a random 50/50 to see if it's male or female
                 if (iGenderSelector <= 5) {
-                    var iMaleSelection = Math.floor(Math.random() * this.dataSource[sPrsType].firstNameMale.length);
+                    var iMaleSelection = Math.floor(Math.random() * this.nameSource[sPrsType].firstNameMale.length);
                     sPrsGender = "male";
-                    sPrsFirstName = (this.dataSource[sPrsType].firstNameMale[iMaleSelection]);
+                    sPrsFirstName = (this.nameSource[sPrsType].firstNameMale[iMaleSelection]);
                 } else {
-                    var iFemaleSelection = Math.floor(Math.random() * this.dataSource[sPrsType].firstNameFemale.length);        
+                    var iFemaleSelection = Math.floor(Math.random() * this.nameSource[sPrsType].firstNameFemale.length);        
                     sPrsGender = "female";
-                    sPrsFirstName = (this.dataSource[sPrsType].firstNameFemale[iFemaleSelection]);
+                    sPrsFirstName = (this.nameSource[sPrsType].firstNameFemale[iFemaleSelection]);
                 }
-                var iLastNameSelection = Math.floor(Math.random() * this.dataSource[sPrsType].lastName.length);
-                sPrsLastName = (this.dataSource[sPrsType].lastName[iLastNameSelection]);
+                var iLastNameSelection = Math.floor(Math.random() * this.nameSource[sPrsType].lastName.length);
+                sPrsLastName = (this.nameSource[sPrsType].lastName[iLastNameSelection]);
             }
         }
     }
