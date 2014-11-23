@@ -4,6 +4,7 @@
 To Do:
 > Use a normal distribution for the professionals age bracket
 > Create middle names for people whose culture usually has them
+> Load JSON using JQuery
 
 ******************************************************************************/
 ///////////////////////////////////////////////////////////////////////////////
@@ -102,18 +103,6 @@ function randomInterval (min, max) {
 
 
 // LOAD JSON
-// function loadJSON(fileName) {
-//     var JSONObject = {};
-//     var xmlhttp = new XMLHttpRequest();
-//     xmlhttp.onreadystatechange=function() {
-//         if (xmlhttp.readyState==4 && xmlhttp.status==200) {
-//             JSONObject = JSON.parse(xmlhttp.responseText);
-//         }
-// };
-//     xmlhttp.open("GET",fileName,true);
-//     xmlhttp.send();
-//     return JSONObject;
-// }
 
 //MAIN CONSTRUCTOR
 //*****************************************************************************
@@ -198,7 +187,7 @@ function RandomPerson (dataObject) {
     this.allInfo.push (dataObject.generateFullName());
     this.allInfo.push (dataObject.generateAge());
 
-    //Create final person values
+    //Extract final person values from array and clear the array
     this.sPrsType = this.allInfo[0];
     this.sPrsGender = this.allInfo[1][0];
     this.sPrsFirstName = this.allInfo[1][1];
@@ -238,3 +227,14 @@ function displayPerson () {
     document.getElementById("agebracket").innerHTML = person1.sPrsAgeBracket;
     document.getElementById("age").innerHTML = person1.iPrsAge;
 }
+
+//USE THAT DATA SOURCE TO CREATE PEOPLE OBJECTS FOR DEBUG
+//*****************************************************************************
+
+function debugPerson () {    
+    nameData = new NameContainer(namePackImport);
+    person1 = new RandomPerson (nameData);
+    console.log(person1);
+}
+
+debugPerson();
