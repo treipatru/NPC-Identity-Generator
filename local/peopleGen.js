@@ -244,26 +244,23 @@ DataPack.prototype.generateJobCat = function () {
     //Select type of job according to weight of the type
     sPrsJobCat = randomWeighted (aJobTypes,this.jobSource.typeWeight);
 
-    
-
     return (sPrsJobCat);
 };
 
 //GET JOB TITLE
 //*********************************
 
-DataPack.prototype.generateJobTitle = function (gender, jobcategory) {
-
+DataPack.prototype.generateJobTitle = function () {
     var selector;
+
     do {
         selector = Math.floor(Math.random() * this.jobSource[sPrsJobCat].gender.length);
-        if (this.jobSource[sPrsJobCat].gender[selector] === gender || this.jobSource[sPrsJobCat].gender[selector] === 'u') {
+        if (this.jobSource[sPrsJobCat].gender[selector] === sPrsGender || this.jobSource[sPrsJobCat].gender[selector] === 'u') {
         sPrsJobTitle = this.jobSource[sPrsJobCat].title[selector];
+        return (sPrsJobTitle);
         }
     }
-    while (this.jobSource[sPrsJobCat].gender[selector] != gender || this.jobSource[sPrsJobCat].gender[selector] != 'u');
-
-    return (sPrsJobTitle);
+    while (this.jobSource[sPrsJobCat].gender[selector] != sPrsGender || this.jobSource[sPrsJobCat].gender[selector] != 'u');
 };
 
 //RANDOM PERSON CONSTRUCTOR
@@ -275,7 +272,7 @@ function RandomPerson (dataObject) {
     this.allInfo.push (dataObject.generateFullName());
     this.allInfo.push (dataObject.generateAge());
     this.allInfo.push (dataObject.generateJobCat());
-    // this.allInfo.push (dataObject.generateJobTitle());
+    this.allInfo.push (dataObject.generateJobTitle());
 
     //Extract final person values from array and clear the array
     this.sPrsType = this.allInfo[0];
@@ -301,7 +298,9 @@ function debugPerson () {
     loadData();
     person1 = new RandomPerson (nameData);
     console.log(person1);
-    console.log(person1.sPrsJobTitle);
+    // var x = nameData.generateJobTitle();
+    // console.log(x);
+    
 }
 
 debugPerson();
