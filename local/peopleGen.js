@@ -81,6 +81,59 @@ var namePackImport = {
     typeWeight: [13, 12, 10, 10, 8, 7, 6, 5, 5, 4, 20]
 };
 
+var jobPackImport = {
+    "academia": {
+        "gender":["u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","f","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","f","u","u","u","u","u","u","u","u","u","u","u","u","u","f","u","u","u","u","u","u","u","u","u","u"],
+        "title":["Agricultural Sciences Teacher","Anthropology Teacher","Archeology Teacher","Architecture Teacher","Art Teacher","Bioinformatics Scientist","Biological Science Teacher","Biological Scientist","Biologist","Biostatistician","Business Teacher","Chemistry Teacher","Climate Change Analyst","Communications Teacher","Computer Science Teacher","Conservation Scientist","Criminal Justice and Law Enforcement Teacher","Cultural Studies Teachers","Drama Teacher","Economics Teacher","Education Administrator","Elementary School Teacher","Engineering Teacher","English Teacher","Environmental Economist","Environmental Science Teacher","Environmental Scientist","Geneticist","Geographer","Geography Teacher","Geologist","Geoscientist","Geospatial Information Scientist","Graduate Teaching Assistant","Health Educator","Historian","History Teacher","Home Economics Teacher","Hydrologist","Kindergarten Teacher","Law Teacher","Librarian","Literature Teacher","Mathematical Science Teacher","Mathematician","Molecular Biologist","Music Teacher","Philosophy Teacher","Physicist","Physics Teacher","Plant Scientist","Political Science Teacher","Political Scientist","Preschool Teacher","Religion Teacher","Research Coordinator","School Psychologist","Scientific Photographer","Social Science Researcher","Social Sciences Teacher","Sociologist","Sociology Teacher","Wildlife Biologist","Zoologist"]
+    },
+
+    "business": {
+        "gender":["u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","f","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u"],
+        "title":["Administrative Assistant","Advertising and Promotions Manager","Advertising Sales Agent","Auditor","Branch Financial Manager","Brokerage Clerk","Budget Analyst","Business Intelligence Analyst","Business Operations Specialist","Chief Executive Officer","Chief Financial Officer","Chief Sustainability Officer","Commodities Trader","Compensation and Benefits Manager","Compliance Manager","Compliance Officer","Credit Analyst","Credit Authorizer","Department Financial Manager","Economist","Executive Secretary","General Manager","Logistics Analyst","Logistics Engineer","Logistics Manager","Loss Prevention Manager","Management Analyst","Market Research Analyst","Marketing Manager","Marketing Specialist","Operations Manager","Operations Research Analysts","Payroll Operator","Production Inspector","Public Relations Manager","Public Relations Specialist","Purchasing Manager","Real Estate Broker","Real Estate Sales Agent","Recruiter","Regulatory Affairs Manager","Regulatory Affairs Specialist","Sales Manager","Sales Representative","Search Marketing Strategist","Supply Chain Manager","Training and Development Manager","Training and Development Specialist"]
+    },
+    
+    "creative": {
+        "gender":["u","u","u","u","u","u","u","u","u","u","u","m","u","u","u","u","u","u","u","u","u","f","u","f","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","m","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u"],
+        "title":["2D Animator","3D Animator","Actor","Architect","Art Curator","Art Director","Art Therapist","Artist","Audio-Visual Specialist","Author","AV Equipment Technician","Camera Operator","Cartoonist","Choreographer","Composer","Copy Writer","Craft Artist","Creative Writer","Dancer","Decorative Painter","Desktop Publisher","Dressmaker","Editor","Fashion Designer","Film Editor","Film Laboratory Technician","Graphic Designer","Illustrator","Industrial Designer","Instructional Designer","Interior Designer","Journalist","Landscape Architect","Makeup Artist","Marine Architect","Movie Director","Multi-Media Artist","Music Arranger","Music Director","Music Orchestrator","Musician","Naval Architect","News Reporter","Painter","Photographic Restorer","Poet","Potter","Professional Photographer","QA Engineer","QA Tester","Radio Announcer","Radio Director","Sculptor","Set Designer","Singer","Sketch Artist","Social Media Manager","Social Media Specialist","Sound Engineer","Street Performer","TV Director","Video Editor","Video Games Designer","Video Games Producer","Video Games Technical Director","Writer"]
+    },
+
+    "energy": {
+        "gender":["m","u","u","u","m","u","u"],
+        "title":["Electrical Engineer","Solar Energy Systems Engineer","Wind Energy Engineer","Wind Energy Project Manager","Wind Turbine Service Technician","Nuclear Engineer","Nuclear Monitoring Technician"]
+    },
+
+    "financial": {
+        "gender":["u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u"],
+        "title":["Account Collector","Accountant","Financial Analyst","Financial Examiner","Financial Manager","Financial Specialist","Fraud Examiner","Fraud Investigator","Insurance Fraud Investigator","Insurance Policy Processing Clerk","Insurance Sales Agent","Investment Fund Manager","Loan Counselor","Loan Officer","Personal Financial Advisor","Revenue Agent","Risk Management Specialist","Securities Trader","Security Management Specialist"]
+    },
+
+    "it": {
+        "gender":["u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u"],
+        "title":["Computer and Information Research Scientist","Computer and Information Systems Managers","Computer Hardware Engineer","Computer Operator","Computer Programmer","Computer Security Specialist","Computer Support Specialist","Computer Systems Analyst","Computer Systems Architect","Data Warehousing Specialist","Database Administrator","Database Architect","Document Management Specialist","Information Security Analyst","Information Technology Project Manager","Network and Computer Systems Administrator","Network Architect","Network Support Specialist","Network Systems and Data Communications Analyst","Software Developer","Software Engineer","Web Administrator","Web Developer"]
+    },
+
+    "medical": {
+        "gender":["f","m","u","u","u","u","u","u","u","u","u","f","u","u","u","u","u","u","u","u","u","m","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u"],
+        "title":["Acute Care Nurse","Ambulance Driver","Anesthesiologists","Chiropractor","Dental Assistant","Dental Hygienist","Dental Laboratory Technician","Dentist","Dermatologist","Dietitian","Emergency Medical Technician","Emergency Service Dispatcher","Endoscopy Technician","Epidemiologist","Exercise Physiologist","Family Practitioner","General Practitioner","Gynecologist","Health Services Manager","Immunologist","Magnetic Resonance Imaging Technologist","Medical Appliance Technician","Medical Assistant","Mental Health Counselor","Microbiologist","Neurologist","Nuclear Medicine Physician","Nurse Anesthetist","Nutritionist","Obstetrician","Ophthalmic Laboratory Technician","Ophthalmologist","Optician","Optometrist","Oral and Maxillofacial Surgeon","Orthodontist","Paramedic","Pathologist","Pediatrician","Pharmacist","Physical Therapist","Preventive Medicine Physician","Prosthetist","Psychiatric Nurse","Psychiatrists","Psychologist","Radiation Therapist","Radiologist","Surgeon","Surgical Assistant","Surgical Technologist","Urologist","Veterinarian","Veterinary Assistant","Veterinary Technician"]
+    },
+
+    "other": {
+        "gender":["u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","m","u","m","m","u","u","u","u","u","u","u","u","u","u","m","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","u","m","m","u","m","u","u","u","u","m","m","m","u","u","u","u","u","u","f","f","u","u","u","u","u","f","m","u","u","u","m","u","m","f","u","u","u","m","u","u","m","m","m","m","m","m","u","m","u","u","u","u","u","u","u","f","m","u","m","u","u","m","m","u","u","u","u","f","u","u","u","u","u","m","u","u","u","u","u","u","m","m","u","u","u","u","u","m","u","u","m","u","u","u","u","u","u","u","u","m","m","u","u","m","m","u","u","m","u","u","u","u","u","u","u","u","u","u","m","u","m","u","m","m","u","f","u","u","u","u","u","u","u","u","u","u","u","u","u","m","u","m","m","m","u","u","u","u","u","u","u","u","u","u","f","m","u","u","u","u","u","u","u","u","u","m","m","u","u","u","u","u","u","u","m","u","m","m","u","u","u","u","u","u","u","u","m","u","u","u","m","m","m","u","m","m","u","u","u","u","u","u","u","u","m","u","u","u","u","u","u","m","u","u","u","m","u","m","u","u","u","u","u","u","u","m","u","u","m","u","u","u","u","u","u","m"],
+        "title":["Acupuncturist","Administrative Law Judge","Administrative Services Manager","Aerobics Instructor","Aerospace Engineer","Aerospace Engineering and Operations Technician","Agricultural Engineer","Agricultural Inspector","Agricultural Technician","Air Crew Member","Air Crew Officer","Air Traffic Controller","Aircraft Engine Specialist","Aircraft Launch and Recovery Officer","Aircraft Launch and Recovery Specialist","Aircraft Mechanics and Service Technician","Airfield Operations Specialist","Airline Copilot","Airline Pilot","Animal Breeder","Animal Scientist","Animal Trainer","Anthropologist","Arbitrator","Archeologist","Archivist","Artist Agent","Astronomer","Athlete","ATM Maintenance","Atmospheric and Space Scientist","Audiologist","Automotive Engineer","Aviation Inspector","Avionics Technician","Bailiff","Baker","Billing Clerk","Bindery Worker","Biochemical Engineer","Biochemist","Biofuels Processing Technician","Biofuels Production Manager","Bioinformatics Technician","Biomass Plant Technician","Biomass Power Plant Manager","Biomedical Engineer","Biophysicist","Boat Builder","Boat Captain","Bookbinder","Bookkeeper","Broadcast News Analyst","Broadcast Technician","Building Inspector","Calibration and Instrumentation Technician","Camera Repairer","Car Mechanic","Carpenter","Cartographer","Central Office Operator","Chemical Engineer","Chemical Plant and System Operator","Chemical Technician","Chemist","Child Care Worker","Child Social Worker","Child Support Investigator","City Planner","Civil Engineer","Civil Engineering Technician","Clinical Nurse Specialist","Sports Coach","Communication Equipment Mechanic","Communications Equipment Operator","Community Health Worker","Community Service Manager","Construction Manager","Coroner","Correctional Officer","Cosmetologist","Counseling Psychologist","Counselor","Court Clerk","Crane Operator","Criminal Investigator","Customer Service Representative","Deputy Sheriff","Detective","Electrical Engineering Technician","Electrician","Elevator Repairman","Embalmer","Emergency Management Specialist","Engine Assembler","Engineer","Engineering Manager","Engineering Technician","Environmental Compliance Inspector","Environmental Engineer","Event Planner","Exhibit Designer","Family Social Worker","Farm Equipment Mechanic","Farm Management Advisor","Fire Fighter","Fire Inspector","Fire Investigator","Fish and Game Warden","Fish Hatchery Manager","Fitness and Wellness Coordinator","Fitness Trainer","Flight Attendant","Flight Engineer","Floral Designer","Food Science Technician","Food Scientist","Food Service Managers","Forensic Science Technician","Forest and Conservation Technician","Forest Fire Fighter","Forest Fire Fighting and Prevention Supervisor","Forest Fire Inspector","Freight Agent","Freight and Cargo Inspector","Fuel Cell Engineer","Fuel Cell Technician","Funeral Attendant","Funeral Director","Gaming Dealer","Gaming Manager","Gaming Service Worker","Gaming Supervisor","Gaming Surveillance Officer","Gas Appliance Repairer","Gas Plant Operator","Geographic Information Systems Technician","Glass Blower","Government Property Inspector","Government Service Executive","Green Marketer","Hairdresser","Hairstylist","Hand Engraver","Head Cook","Heating and Air Conditioning Mechanic","Highway Patrol Pilot","Home Appliance Repairer","Human Resources Assistant","Human Resources Manager","HVAC Mechanic","Hydroelectric Plant Technician","Hydroelectric Production Manager","Immigration and Customs Inspector","Industrial Machinery Mechanic","Industrial Production Manager","Intelligence Analyst","Interpreter","Jeweler","Jewelry Bench Worker","Judge","Judicial Law Clerk","Law Clerk","Lawyer","Legislator","Lifeguard","Locksmith","Locomotive Engineer","Lodging Manager","Logging Worker","Machinist","Magistrate","Manicurist","Manufacturing Engineer","Mapping Technician","Marine Engineer","Marriage and Family Therapist","Massage Therapist","Materials Engineer","Mechanical Engineer","Mechanical Engineering Technician","Mechanical Inspector","Mediator","Microsystems Engineer","Missing Persons Investigator","Model","Mortician","Motor Vehicle Inspectors","Motorboat Mechanic","Motorboat Operator","Motorcycle Mechanic","Museum Curator","Music Therapist","Nanosystems Engineer","Occupational Health and Safety Specialist","Occupational Therapist","Online Merchant","Pantograph Engraver","Paralegal Assistants","Park Naturalist","Pastry Chef","Pedicurist","Petroleum Technician","Photographic Process Worker","Police Detective","Police Officer","Police Patrol Officer","Police Records Officer","Postal Service Clerk","Postal Service Mail Carrier","Postmaster","Power Plant Operator","Prepress Technician","Private Detective","Probation Officer","Public Transportation Inspector","Quality Control Analyst","Quality Control Systems Manager","Radar Technician","Radio Operator","Railroad Inspector","Railroad Police Officer","Railroad Switch Operator","Railroad Yard Worker","Railroad Yardmaster","Ranch Manager","Recreational Therapist","Sports Referee","Regional Planner","Rehabilitation Counselor","Restaurant Cook","Robotics Engineer","Robotics Technician","Safe Repairer","Safety Engineer","School Social Worker","Security Manager","Sheriff","Ship Captain","Ship Carpenter","Ship Engineer","Shipwright","Silversmith","Skin Care Specialist","Social Service Specialists","Social Worker","Spa Manager","Special Agent","Statistician","Storage and Distribution Manager","Substance Abuse Counselor","Subway Operator","Survey Researcher","Surveyor","Sustainability Specialist","Tailor","Technical Writer","Telecommunications Engineering Specialist","Telecommunications Line Installer","Telemarketer","Therapist","Tour Guide","Traffic Technician","Train Crew Member","Transit Police Officer","Translator","Transportation Engineer","Transportation Inspector","Transportation Manager","Transportation Security Screener","Travel Agent","Travel Guide","Truck Mechanic","Tutor","TV Announcer","TV Camera Operator","Typesetter","Umpire","Undertaker","Upholsterer","Urban Planner","Vocational Counselor","Watch Repairer"]
+    },
+
+    "unskilled": {
+        "gender":["m","u","u","m","m","m","u","u","m","m","u","m","m","m","m","u","u","m","m","u","m","m","m","m","m","u","u","u","m","m","u","m","u","m","u","m","m","m","u","u","m","m","m","m","m","m","m","m","u","m","m","m","m","u","u","f","m","u","u","u","f","u","m","m","u","m","m","m","m","m","m","m","m","u","m","u","m","f","m","m","m","m","m","m","u","u","m","u","u","m","m","u","u","u","m","f","m","m"],
+        "title":["Agricultural Equipment Operator","Aircraft Cargo Handling Supervisor","Amusement Park Attendant","Animal Control Worker","Baggage Porter","Barber","Barista","Bartender","Bellhop","Bicycle Repairer","Bike Messenger","Building Cleaning Worker","Bulldozer Operator","Bus Driver","Butcher","Cafeteria Cook","Cashier","Chauffeur","Coatroom Attendant","Commercial Diver","Commercial Pilot","Concierge","Construction Laborer","Construction Worker","Conveyor Operators","Courier","Data Entry Keyer","Dishwasher","Door-To-Door Salesman","Drywall Installer","Escort","Extraction Worker","Farmer","Farmworker","Fast Food Cook","Fisherman","Floor Layer","Floor Sander","Food Cooking Machine Operator","Food Preparation Worker","Forester","Gas Station Operator","Grinding and Polishing Worker","Groundskeeper","Hazardous Materials Removal Worker","Heavy Truck Driver","Highway Maintenance Worker","Home Appliance Installer","Hotel Clerk","Industrial Truck Operator","Insulation Worker","Janitor","Loading Machine Operator","Lobby Attendant","Locker Room Attendant","Maid","Maintenance Worker","Meat Packer","Motel Clerk","Movie Projectionist","Nanny","Packaging Machine Operator","Parking Enforcement Worker","Parking Lot Attendant","Personal Care Worker","Pest Control Worker","Pile-Driver Operator","Pipelayer","Plumber","Precious Metal Worker","Printing Machine Operator","Printing Press Operator","Refuse and Recyclable Material Collectors","Retail Salesperson","School Bus Driver","Screen Printing Machine Operator","Seaman","Secretary","Security Guard","Septic Tank Servicer","Sheet Metal Worker","Solderer","Stage Worker","Steel Worker","Street Vendor","Stripper","Taxi Driver","Telephone Operator","Teller","Tile and Marble Setter","Trailer Truck Driver","Typist","Usher","Utilities Meter Reader","Waiter","Waitress","Welder","Woodworker"]
+    },
+
+    "unemployed": {
+        "gender": ["u"],
+        "title": ["Unemployed"]
+    },
+
+    typeWeight: [8, 7, 9, 5, 6, 3, 9, 20, 25, 8]
+};
 
 //ADDITIONAL FUNCTIONS
 //*****************************************************************************
@@ -106,7 +159,7 @@ function randomInterval (min, max) {
 
 //MAIN CONSTRUCTOR
 //*****************************************************************************
-function NameContainer (nameSource, jobSource, charSource) {
+function DataPack (nameSource, jobSource, charSource) {
     //Initialize Variables
     this.nameSource = nameSource;
     this.jobSource = jobSource;
@@ -125,7 +178,7 @@ function NameContainer (nameSource, jobSource, charSource) {
 
 //GET PERSON TYPE
 //*********************************
-NameContainer.prototype.generateNameType = function () {
+DataPack.prototype.generateNameType = function () {
     //Select type of name according to weight of the type
     var aPeopleTypes = Object.keys(this.nameSource);
     aPeopleTypes.pop();
@@ -136,7 +189,7 @@ NameContainer.prototype.generateNameType = function () {
 
 //GET FULL NAME TYPE
 //*********************************
-NameContainer.prototype.generateFullName = function () {
+DataPack.prototype.generateFullName = function () {
     var iGenderSelector = Math.floor(Math.random() * 10 + 1);
     //Go through all items in the object and look for a type defined as sPrsType
     for (var key in this.nameSource) {
@@ -145,11 +198,11 @@ NameContainer.prototype.generateFullName = function () {
                 //When the type is a match first do a random 50/50 to see if it's male or female
                 if (iGenderSelector <= 5) {
                     var iMaleSelection = Math.floor(Math.random() * this.nameSource[sPrsType].firstNameMale.length);
-                    sPrsGender = "male";
+                    sPrsGender = "m";
                     sPrsFirstName = (this.nameSource[sPrsType].firstNameMale[iMaleSelection]);
                 } else {
                     var iFemaleSelection = Math.floor(Math.random() * this.nameSource[sPrsType].firstNameFemale.length);        
-                    sPrsGender = "female";
+                    sPrsGender = "f";
                     sPrsFirstName = (this.nameSource[sPrsType].firstNameFemale[iFemaleSelection]);
                 }
                 var iLastNameSelection = Math.floor(Math.random() * this.nameSource[sPrsType].lastName.length);
@@ -163,7 +216,7 @@ NameContainer.prototype.generateFullName = function () {
 
 //GET AGE AND AGEBRACKET
 //*********************************
-NameContainer.prototype.generateAge = function () {
+DataPack.prototype.generateAge = function () {
     var aAgeBrackets = ["kid", "student", "professional", "elder"];
     var aAgeBracketWeight = [15, 17, 56, 12];
     //Get weighted age group
@@ -181,6 +234,38 @@ NameContainer.prototype.generateAge = function () {
     return [sPrsAgeBracket, iPrsAge];
 };
 
+//GET CATEGORY
+//*********************************
+DataPack.prototype.generateJobCat = function () {
+    //Create an array of all jobs present in jobPackImport
+    var aJobTypes = Object.keys(this.jobSource);
+    aJobTypes.pop();
+
+    //Select type of job according to weight of the type
+    sPrsJobCat = randomWeighted (aJobTypes,this.jobSource.typeWeight);
+
+    
+
+    return (sPrsJobCat);
+};
+
+//GET JOB TITLE
+//*********************************
+
+DataPack.prototype.generateJobTitle = function (gender, jobcategory) {
+
+    var selector;
+    do {
+        selector = Math.floor(Math.random() * this.jobSource[sPrsJobCat].gender.length);
+        if (this.jobSource[sPrsJobCat].gender[selector] === gender || this.jobSource[sPrsJobCat].gender[selector] === 'u') {
+        sPrsJobTitle = this.jobSource[sPrsJobCat].title[selector];
+        }
+    }
+    while (this.jobSource[sPrsJobCat].gender[selector] != gender || this.jobSource[sPrsJobCat].gender[selector] != 'u');
+
+    return (sPrsJobTitle);
+};
+
 //RANDOM PERSON CONSTRUCTOR
 //*****************************************************************************
 function RandomPerson (dataObject) {
@@ -189,6 +274,8 @@ function RandomPerson (dataObject) {
     this.allInfo.push (dataObject.generateNameType());
     this.allInfo.push (dataObject.generateFullName());
     this.allInfo.push (dataObject.generateAge());
+    this.allInfo.push (dataObject.generateJobCat());
+    // this.allInfo.push (dataObject.generateJobTitle());
 
     //Extract final person values from array and clear the array
     this.sPrsType = this.allInfo[0];
@@ -198,46 +285,23 @@ function RandomPerson (dataObject) {
     this.sPrsFullName = (this.sPrsFirstName + " " + this.sPrsLastName);
     this.sPrsAgeBracket = this.allInfo[2][0];
     this.iPrsAge = this.allInfo[2][1];
-    this.sPrsJobCat = "";
-    this.sPrsJobTitle = "";
+    this.sPrsJobCat = this.allInfo[3];
+    this.sPrsJobTitle = this.allInfo[4];
     this.allInfo = [];
 }
 
-//LOAD EXTERNAL DATA AND CREATE AN OBJECT WITH THE NAMECONTAINER CONSTRUCTOR
+//CREATE PEOPLE OBJECT FOR DEBUG
 //*****************************************************************************
-
-
-//USE THAT DATA SOURCE TO CREATE PEOPLE OBJECTS WITH THE PERSON CONSTRUCTOR
-//*****************************************************************************
-
-function initData () {
-    nameData = new NameContainer(namePackImport);
-
-    if (nameData === undefined) {
-        document.getElementById("status").innerHTML = "nameData is null";
-        return;
-    } else {
-        document.getElementById("status").innerHTML = "nameData is present, creating object.";
-    }
+function loadData() {
+    nameData = new DataPack(namePackImport, jobPackImport);
 }
 
-function displayPerson () {    
-    person1 = new RandomPerson (nameData);
-    document.getElementById("firstname").innerHTML = person1.sPrsFirstName;
-    document.getElementById("lastname").innerHTML = person1.sPrsLastName;
-    document.getElementById("type").innerHTML = person1.sPrsType;
-    document.getElementById("gender").innerHTML = person1.sPrsGender;
-    document.getElementById("agebracket").innerHTML = person1.sPrsAgeBracket;
-    document.getElementById("age").innerHTML = person1.iPrsAge;
-}
-
-//USE THAT DATA SOURCE TO CREATE PEOPLE OBJECTS FOR DEBUG
-//*****************************************************************************
 
 function debugPerson () {    
-    nameData = new NameContainer(namePackImport);
+    loadData();
     person1 = new RandomPerson (nameData);
     console.log(person1);
+    console.log(person1.sPrsJobTitle);
 }
 
 debugPerson();
