@@ -59,11 +59,10 @@ var namePackImport = {
         lastName: ["Nowak","Kowalski","Wiśniewski","Wójcik","Kowalczyk","Kamiński","Lewandowski","Zieliński","Szymański","Woźniak","Dąbrowski","Kozłowski","Jankowski","Mazur","Kwiatkowski","Wojciechowski","Krawczyk","Kaczmarek","Piotrowski","Grabowski"]
     },
     
-    Other: {
-        firstNameMale: ["Aboot"],
-        firstNameFemale: ["Bloody"],
-        lastName: ["Time"]
-        
+    Canadian: {
+        firstNameMale: ["Simon","Alex","Samuel","Matthew","Gabriel","David","William","Vincent","Charles","Jordan","Brandon","Ryan","Kevin","Antoine","Nathan","Nicolas","Josh","Ben","Alexandre","Eric","Étienne","Michaël","Mathieu","Philippe","Olivier","Justin","Anthony","James","Adam","Nick","Ethan","Daniel","Maxime","Cédric","Jake","Nicholas","John","Jacob","Owen","Kyle","Jack","Liam","Dave","Luke","Matt","Julien","Francis","Andrew","Chris","Guillaume","Max","Austin","Tyler","Aaron","Brad","Cameron","Evan","Mark","Frédéric","Sam","Patrick","Zach","Connor","Aidan","Dylan","Christophe","Marc-Antoine","Jason","Riley","Colton","Logan","Raphaël","Tony","Christian","Jimmy","Will","Sonny","Francois","Joseph","Sébastien","Steven","George","Paul ","Scott","Noah","Joey","Thomas","Xavier","Walid","Kenneth","Mitchell","Marc-André","Bill","Morgan","Zachary","Alexander","Emile","Jonathan"],
+        firstNameFemale: ["Sarah","Emily","Emma","Jessica","Rachel","Gabrielle","Camille","Megan","Ashley","Catherine","Hannah","Marie","Stephanie","Laurence","Amy","Samantha","Laura","Alexandra","Taylor","Jade","Maude","Madison","Audrey","Kayla","vanessa","Julia","Sabrina","Olivia","Jenna","Chloe","Mélissa","Alyssa","Émilie","Amanda","Laurie","Morgan","Andrea","Julie","Caroline","Chelsea","Elizabeth","Claire","Victoria","Rebecca","Sydney","Geneviève","Amélie","Valérie","Justine","Charlotte","Roxanne","Sophie","Myriam","Kim","Nicole","Amber","Danielle","Mackenzie","Bianca","Courtney","Alicia","Brittany","Lauren","Florence","Rosalie","Haley","Annabelle","Vicky","Sara","Marianne","Paige","Marie-Eve","Anna","Jasmine","Sierra","Mia","Isabelle","Hailey","Mary","Kendra","Emy","Ariane","Erika","Marie-Pier","Kate","Cynthia","Cassie","Heather","Maria","Paméla","Sam","Natasha","Melanie","Jennifer","Katherine","Ellie","Natalie","Brenda"],
+        lastName: ["Smith","Lam","Martin","Brown","Roy","Tremblay","Lee","Gagnon","Wilson","Clark","Johnson","White","Williams","Cote","Taylor","Campbell","Anderson","Jones","Jackson","Hall","Hill","Morris","Miller","Macdonald","Thompson","Scott","Stewart","Park","Robinson","Moore","Mitchell","Walker","Ross","Johnston","Reid","Baker","Evans","Robertson","King","Bell","Davis","Graham","Wood","Fraser","Roberts","Harris","Watson","Peters","Mann","Lewis","Clarke","Phillips","Nelson","Murray","Davies","Grant","Hamilton"]
     },
 
     typeWeight: [13, 12, 10, 10, 8, 7, 6, 5, 5, 4, 20]
