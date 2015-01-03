@@ -149,7 +149,7 @@ body {
     padding-top: 20px;
 }
 
-#refreshPeople:hover {
+#refreshPeople p:hover {
     color: #FFFFFF;
     cursor: default;
 }
