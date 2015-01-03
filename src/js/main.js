@@ -120,7 +120,7 @@ DataPack.prototype.generateFullName = function () {
 
 DataPack.prototype.generateAge = function () {
     var aAgeBrackets = ["Kid", "Student", "Professional", "Elder"];
-    var aAgeBracketWeight = [15, 17, 56, 12];
+    var aAgeBracketWeight = [7, 10, 73, 10];
     //Get weighted age group
     sPrsAgeBracket = randomWeighted (aAgeBrackets, aAgeBracketWeight);
     //Get a random age from the specific bracket
@@ -142,12 +142,20 @@ DataPack.prototype.generateAge = function () {
 
 
 DataPack.prototype.generateJobCat = function () {
+    if (sPrsAgeBracket === "Kid") {
+        sPrsJobCat = "Minor";
+    } else if (sPrsAgeBracket === "Elder") {
+        sPrsJobCat = "Retired";
+    } else if (sPrsAgeBracket === "Student") {
+        sPrsJobCat = "Student";
+    } else {
     //Create an array of all jobs present in jobPackImport
     var aJobTypes = Object.keys(this.jobSource);
     aJobTypes.pop();
 
     //Select type of job according to weight of the type
     sPrsJobCat = randomWeighted (aJobTypes,this.jobSource.typeWeight);
+    }
 
     return (sPrsJobCat);
 };
@@ -158,16 +166,27 @@ DataPack.prototype.generateJobCat = function () {
 
 
 DataPack.prototype.generateJobTitle = function () {
+    if (sPrsJobCat === "Minor") {
+        sPrsJobTitle = "-";
+        return sPrsJobTitle;
+    }else if (sPrsJobCat === "Retired") {
+        sPrsJobTitle = "Retired";
+        return sPrsJobTitle;
+    }else if (sPrsJobCat === "Student") {
+        sPrsJobTitle = "Student";
+        return sPrsJobTitle;
+    }else {
+    
     var selector;
-
-    do {
-        selector = Math.floor(Math.random() * this.jobSource[sPrsJobCat].gender.length);
-        if (this.jobSource[sPrsJobCat].gender[selector] === sPrsGender || this.jobSource[sPrsJobCat].gender[selector] === 'u') {
-        sPrsJobTitle = this.jobSource[sPrsJobCat].title[selector];
-        return (sPrsJobTitle);
+        do {
+            selector = Math.floor(Math.random() * this.jobSource[sPrsJobCat].gender.length);
+            if (this.jobSource[sPrsJobCat].gender[selector] === sPrsGender || this.jobSource[sPrsJobCat].gender[selector] === 'u') {
+            sPrsJobTitle = this.jobSource[sPrsJobCat].title[selector];
+            return (sPrsJobTitle);
+            }
         }
-    }
-    while (this.jobSource[sPrsJobCat].gender[selector] != sPrsGender || this.jobSource[sPrsJobCat].gender[selector] != 'u');
+        while (this.jobSource[sPrsJobCat].gender[selector] != sPrsGender || this.jobSource[sPrsJobCat].gender[selector] != 'u');
+        }
 };
 
 
@@ -228,44 +247,38 @@ var nameData = new DataPack(namePackImport, jobPackImport);
 function populateIndividuals () {    
     person1 = new RandomPerson (nameData);
         $( "#person1 #fullName" ).text( person1.sPrsFullName);
-        $( "#person1 #gender" ).text( person1.sPrsGender);
+        $( "#person1 #ageGender" ).text( iPrsAge + ", " + person1.sPrsGender);
         $( "#person1 #nationality" ).text( person1.sPrsType);
-        $( "#person1 #age" ).text( person1.sPrsAgeBracket);
         $( "#person1 #industry" ).text( person1.sPrsJobCat);
         $( "#person1 #jobTitle" ).text( person1.sPrsJobTitle);
     person2 = new RandomPerson (nameData);
         $( "#person2 #fullName" ).text( person2.sPrsFullName);
-        $( "#person2 #gender" ).text( person2.sPrsGender);
+        $( "#person2 #ageGender" ).text( iPrsAge + ", " + person2.sPrsGender);
         $( "#person2 #nationality" ).text( person2.sPrsType);
-        $( "#person2 #age" ).text( person2.sPrsAgeBracket);
         $( "#person2 #industry" ).text( person2.sPrsJobCat);
         $( "#person2 #jobTitle" ).text( person2.sPrsJobTitle);
     person3 = new RandomPerson (nameData);
         $( "#person3 #fullName" ).text( person3.sPrsFullName);
-        $( "#person3 #gender" ).text( person3.sPrsGender);
+        $( "#person3 #ageGender" ).text( iPrsAge + ", " + person3.sPrsGender);
         $( "#person3 #nationality" ).text( person3.sPrsType);
-        $( "#person3 #age" ).text( person3.sPrsAgeBracket);
         $( "#person3 #industry" ).text( person3.sPrsJobCat);
         $( "#person3 #jobTitle" ).text( person3.sPrsJobTitle);
     person4 = new RandomPerson (nameData);
         $( "#person4 #fullName" ).text( person4.sPrsFullName);
-        $( "#person4 #gender" ).text( person4.sPrsGender);
+        $( "#person4 #ageGender" ).text( iPrsAge + ", " + person4.sPrsGender);
         $( "#person4 #nationality" ).text( person4.sPrsType);
-        $( "#person4 #age" ).text( person4.sPrsAgeBracket);
         $( "#person4 #industry" ).text( person4.sPrsJobCat);
         $( "#person4 #jobTitle" ).text( person4.sPrsJobTitle);
     person5 = new RandomPerson (nameData);
         $( "#person5 #fullName" ).text( person5.sPrsFullName);
-        $( "#person5 #gender" ).text( person5.sPrsGender);
+        $( "#person5 #ageGender" ).text( iPrsAge + ", " + person5.sPrsGender);
         $( "#person5 #nationality" ).text( person5.sPrsType);
-        $( "#person5 #age" ).text( person5.sPrsAgeBracket);
         $( "#person5 #industry" ).text( person5.sPrsJobCat);
         $( "#person5 #jobTitle" ).text( person5.sPrsJobTitle);
     person6 = new RandomPerson (nameData);
         $( "#person6 #fullName" ).text( person6.sPrsFullName);
-        $( "#person6 #gender" ).text( person6.sPrsGender);
+        $( "#person6 #ageGender" ).text( iPrsAge + ", " + person6.sPrsGender);
         $( "#person6 #nationality" ).text( person6.sPrsType);
-        $( "#person6 #age" ).text( person6.sPrsAgeBracket);
         $( "#person6 #industry" ).text( person6.sPrsJobCat);
         $( "#person6 #jobTitle" ).text( person6.sPrsJobTitle);
 }
