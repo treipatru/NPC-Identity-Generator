@@ -22,7 +22,7 @@
 
 function randomWeighted (values, valuesWeight) {
     var aWeightedValues = [];
-    
+
     for (var i = 0; i < values.length; i++) {
         for (var j = 0; j < valuesWeight[i]; j++) {
             aWeightedValues.push(values[i]);
@@ -30,11 +30,17 @@ function randomWeighted (values, valuesWeight) {
     }
     var randomPick = Math.floor(Math.random() * aWeightedValues.length);
     return aWeightedValues[randomPick];
-    //!!For accurate percentages make sure the valuesWeight adds up to 100!
+    //!!For accurate percentages make sure the valuesWeight adds up to 100!!
 }
 
 function randomInterval (min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+//Randomly select an item from an array (source)
+function randomSelectArray (source) {
+    var random = Math.floor(Math.random()* source.length);
+    return source[random];
 }
 
 
@@ -67,7 +73,7 @@ function DataPack (nameSource, jobSource, charSource) {
     this.sPrsAgeBracket = "";
     this.sPrsJobCat = "";
     this.sPrsJobTitle = "";
-    
+
 }
 
 // GENERATE PERSON TYPE
@@ -78,7 +84,7 @@ DataPack.prototype.generateNameType = function () {
     //Select type of name according to weight of the type
     var aPeopleTypes = Object.keys(this.nameSource);
     aPeopleTypes.pop();
-    
+
     sPrsType = randomWeighted (aPeopleTypes,this.nameSource.typeWeight);
     return(sPrsType);
 };
@@ -93,14 +99,14 @@ DataPack.prototype.generateFullName = function () {
     //Go through all items in the object and look for a type defined as sPrsType
     for (var key in this.nameSource) {
         if (this.nameSource.hasOwnProperty(key)) {
-            if (key === sPrsType) {     
+            if (key === sPrsType) {
                 //When the type is a match first do a random 50/50 to see if it's male or female
                 if (iGenderSelector <= 5) {
                     var iMaleSelection = Math.floor(Math.random() * this.nameSource[sPrsType].firstNameMale.length);
                     sPrsGender = "Male";
                     sPrsFirstName = (this.nameSource[sPrsType].firstNameMale[iMaleSelection]);
                 } else {
-                    var iFemaleSelection = Math.floor(Math.random() * this.nameSource[sPrsType].firstNameFemale.length);        
+                    var iFemaleSelection = Math.floor(Math.random() * this.nameSource[sPrsType].firstNameFemale.length);
                     sPrsGender = "Female";
                     sPrsFirstName = (this.nameSource[sPrsType].firstNameFemale[iFemaleSelection]);
                 }
@@ -176,7 +182,7 @@ DataPack.prototype.generateJobTitle = function () {
         sPrsJobTitle = "Student";
         return sPrsJobTitle;
     }else {
-    
+
     var selector;
         do {
             selector = Math.floor(Math.random() * this.jobSource[sPrsJobCat].gender.length);
@@ -244,7 +250,7 @@ var nameData = new DataPack(namePackImport, jobPackImport);
 //-----------------------------------------------------------------------------
 
 
-function populateIndividuals () {    
+function populateIndividuals () {
     person1 = new RandomPerson (nameData);
         $( "#person1 #fullName" ).text( person1.sPrsFullName);
         $( "#person1 #ageGender" ).text( iPrsAge + ", " + person1.sPrsGender);
