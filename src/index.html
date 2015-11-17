@@ -26,12 +26,17 @@
         <div class="section" id="illustration">
         <div class="sectionContainer">
             <div class="infoBox">
-            <h2>Interactive</h2>
-            <p>Click on the dots, look at details.<p>
+            <h2>ID Card</h2>
+            <p>Here is a random citizen.<p>
             </div>
-            <div id="animation">
-            <img src="img/placeholder.png">
+            <div id="IDCard">
+              <img id="IDHead" src="img/portrait/head02.png"/>
+              <img id="IDEyes" src="img/portrait/eyes01.png"/>
+              <img id="IDMouth" src="img/portrait/mouth01.png"/>
+              <img id="IDHair" src="img/portrait/hair01.png"/>
+              <!-- <img id="IDAccessory" src="img/portrait/accessory01.png"/> -->
             </div>
+            <button id="refreshIDCard" type="button">Refresh yo face!</button>
         </div>
         </div>
 
@@ -39,7 +44,7 @@
         <div class="sectionContainer">
             <div class="infoBox">
             <h2>Individuals</h2>
-            <p>Here are random individuals and their properties.<p>
+            <p>Here's a group of people together.<p>
             </div>
             <div class="personBox" id="person1">
             <p id="fullName"></p>
@@ -82,18 +87,19 @@
             <p id="nationality"></p>
             <p id="industry"></p>
             <p id="jobTitle"></p>
-            </div>            
+            </div>
             <div id="refreshPeople"><p>Click here to see some fresh faces.</p></div>
         </div>
         </div>
 
         <div id="footer">
-         <a href="planet34.org">planet34.org</a> 
+         <a href="planet34.org">planet34.org</a>
         </div>
 
         <!-- Load Javascript -->
         <script src="js/vendor/jquery-1.11.1.min.js"></script>
         <script src="js/datasource.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/idcard.js"></script>
     </body>
 </html>

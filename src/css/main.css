@@ -67,7 +67,7 @@ textarea {
    ========================================================================== */
 
 body {
-    margin: 0 0 30px;   
+    margin: 0 0 30px;
 }
 
 .section {
@@ -100,7 +100,7 @@ body {
 
 
 /* =============
-   ILLUSTRATION - INTERACTIVE ANIMATION
+   ILLUSTRATION - THIS IS WHERE WE SET PROPERTIES FOR THE ID AREA
    ============= */
 
 
@@ -108,12 +108,40 @@ body {
     background: #DAEDE2;
 }
 
-#animation {
-    text-align: center;
-    overflow: hidden;
+#IDCard {
+  width: 300px;
+  height: 400px;
+
+  overflow: hidden;
 }
 
+#IDCard img {
+  position: absolute;
+}
 
+#IDHead {
+  z-index: 10;
+}
+
+#IDEyes {
+  z-index: 20;
+}
+
+#IDMouth {
+  z-index: 30;
+}
+
+#IDHair {
+  z-index: 40;
+}
+
+#IDAccessory {
+  z-index: 50;
+}
+
+#refreshIDCard {
+  width: 300px;
+}
 /* =============
    INDIVIDUALS
    ============= */
