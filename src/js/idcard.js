@@ -32,9 +32,29 @@ var aIDNose = ["nose01","nose02","nose03","nose04","nose05","nose06","nose07","n
 
 
 
+//#############################################################################
+// Generate a person using main.js
+//#############################################################################
+
+
+
+
+
+function generateIDCardDetails () {
+    person9 = new RandomPerson (nameData);
+        $( "#IDFullName" ).text( person9.sPrsFullName);
+        $( "#IDAgeGender" ).text( person9.iPrsAge + ", " + person9.sPrsGender);
+        $( "#IDNationality" ).text( person9.sPrsType);
+        $( "#IDIndustry" ).text( person9.sPrsJobCat);
+        $( "#IDJobTitle" ).text( person9.sPrsJobTitle);
+}
+
+
+
+
 
 //#############################################################################
-// Generate a Portrait and write to HTML
+// Generate a Portrait and write IMAGES to HTML
 //#############################################################################
 
 
@@ -72,5 +92,7 @@ function fGenerateIDCard () {
 
 
 $( "#refreshIDCard" ).click(function() {
-    fGenerateIDCard ();
+  console.log("it's a me! mario!")
+  fGenerateIDCard ();
+  generateIDCardDetails ();
 });
