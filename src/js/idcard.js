@@ -91,7 +91,7 @@ function fGenerateIDCard () {
 
 
 
-$( "#refreshIDCard" ).click(function() {
+$( "#generateButton" ).click(function() {
   console.log("it's a me! mario!")
   fGenerateIDCard ();
   generateIDCardDetails ();
