@@ -281,12 +281,6 @@ function populateIndividuals () {
         $( "#person5 #nationality" ).text( person5.sPrsType);
         $( "#person5 #industry" ).text( person5.sPrsJobCat);
         $( "#person5 #jobTitle" ).text( person5.sPrsJobTitle);
-    person6 = new RandomPerson (nameData);
-        $( "#person6 #fullName" ).text( person6.sPrsFullName);
-        $( "#person6 #ageGender" ).text( iPrsAge + ", " + person6.sPrsGender);
-        $( "#person6 #nationality" ).text( person6.sPrsType);
-        $( "#person6 #industry" ).text( person6.sPrsJobCat);
-        $( "#person6 #jobTitle" ).text( person6.sPrsJobTitle);
 }
 
 populateIndividuals();
