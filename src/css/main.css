@@ -1,6 +1,6 @@
 /*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
 
-@import url(http://fonts.googleapis.com/css?family=Raleway:400);
+/*@import url(http://fonts.googleapis.com/css?family=Cousine:400);*/
 
 html,
 button,
@@ -12,7 +12,7 @@ textarea {
 
 html {
     position: relative;
-    font-family: 'Raleway', sans-serif;
+/*    font-family: 'Cousine', sans-serif;*/
     font-size: 1em;
     line-height: 1.4;
     min-height: 100%;
@@ -71,14 +71,12 @@ body {
 }
 
 .section {
-    width: 100%;
     clear: both;
 }
 
 .sectionContainer {
     margin: 0 auto;
     width: 85%;
-    padding: 30px;
 }
 
 .infoBox {
@@ -92,10 +90,11 @@ body {
 
 
 #header {
-    color: #F6F792;
-    background: #333745;
-    text-align: center;
-    padding: 20px 0 20px 0;
+    color: white;
+    background: black;
+    text-align: left;
+    padding: 20px;
+    font-size: 1.5em;
 }
 
 
@@ -105,14 +104,21 @@ body {
 
 
 #illustration {
-    background: #DAEDE2;
+    background: url(../img/bg_tile.png) repeat;
+
+}
+
+#illustrationContainer {
+  padding: 30px;
 }
 
 #IDCard {
-  width: 359px;
+  width: 60%;
   height: 424px;
-
+  margin: auto;
   overflow: hidden;
+  background: white;
+  padding: 30px;
 }
 
 #IDCard img {
@@ -150,7 +156,7 @@ body {
 
 
 #individuals {
-    background: #77C4D3;
+    background: #E6E6E6;
 }
 
 .personBox {

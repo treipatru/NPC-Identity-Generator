@@ -19,35 +19,48 @@
     <body>
 
         <div class="section" id="header">
-        <img src="img/icon-header.png">
-        <p>NPC Identity Generator</p>
+        <p><span style="color:#FF0000">NPC</span> Identity Generator</p>
         </div>
 
         <div class="section" id="illustration">
-        <div class="sectionContainer">
-            <div class="infoBox">
-            <h2>ID Card</h2>
-            <p>Here is a random citizen.<p>
-            </div>
+        <div class="sectionContainer" id="illustrationContainer">
             <div id="IDCard">
-              <img id="IDCollar" src="img/portrait/collar01.png"/>
-              <img id="IDEars" src="img/portrait/ears01.png"/>
-              <img id="IDEyes" src="img/portrait/eyes01.png"/>
-              <img id="IDHead" src="img/portrait/head01.png"/>
-              <img id="IDJawline" src="img/portrait/jawline02.png"/>
-              <img id="IDMouth" src="img/portrait/mouth01.png"/>
-              <img id="IDNose" src="img/portrait/nose01.png"/>
+                <div id="CharPortrait">
+                <img id="IDCollar" src="img/portrait/collar01.png"/>
+                <img id="IDEars" src="img/portrait/ears01.png"/>
+                <img id="IDEyes" src="img/portrait/eyes01.png"/>
+                <img id="IDHead" src="img/portrait/head01.png"/>
+                <img id="IDJawline" src="img/portrait/jawline02.png"/>
+                <img id="IDMouth" src="img/portrait/mouth01.png"/>
+                <img id="IDNose" src="img/portrait/nose01.png"/>
+              </div>
+
+              <div id="IDIndustryBox" style="float:right;">
+                <p id="IDIndustry"></p>
+                <p id="IDJobTitle"></p>
+              </div>
+
+              <div id="IDNameBox">
+                <p id="IDFullName"></p>
+              </div>
+
+              <div id="IDAgeBox">
+                <p id="IDAgeGender"></p>
+              </div>
+
+              <div id="IDNationalityBox">
+                <p id="IDNationality"></p>
+              </div>
+
+
+              <button id="refreshIDCard" type="button" style="clear:both;float:right;">Refresh yo face!</button>
             </div>
-            <button id="refreshIDCard" type="button">Refresh yo face!</button>
+
         </div>
         </div>
 
         <div class="section" id="individuals">
         <div class="sectionContainer">
-            <div class="infoBox">
-            <h2>Individuals</h2>
-            <p>Here's a group of people together.<p>
-            </div>
             <div class="personBox" id="person1">
             <p id="fullName"></p>
             <p id="ageGender"></p>
