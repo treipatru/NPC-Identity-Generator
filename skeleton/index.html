@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>NPC Identity Generator</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href='https://fonts.googleapis.com/css?family=Cousine:400,400italic,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/custom.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+
+    <div class="row">
+      <div class="twelve columns" id="pageHeader">
+        <h5><span style="color:#FF0000">NPC</span> Identity Generator</h5>
+      </div>
+    </div>
+
+    <div class="row" id="idContainer">
+      <div class="row" id="idCard">
+        <div id="IDIllustration">
+          <img id="IDCollar"/>
+          <img id="IDEyes"/>
+          <img id="IDHead"/>
+          <img id="IDMouth"/>
+          <img id="IDNose"/>
+          <img id="IDAcc"/>
+        </div>
+        <div id="IDIndustryBox">
+          <p id="IDIndustry"></p>
+          <p id="IDJobTitle"></p>
+        </div>
+
+        <div id="IDNameBox">
+          <p id="IDFirstName"></p>
+          <p id="IDLastName"></p>
+        </div>
+
+        <div id="IDAgeBox">
+          <p id="IDAgeGender"></p>
+        </div>
+
+        <div id="IDNationalityBox">
+          <p id="IDNationality"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+    </div>
+
+
+  </div>
+
+  <!-- Load Javascript -->
+  <script src="js/jquery-1.11.1.min.js"></script>
+  <script src="js/datasource.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/idcard.js"></script>
+  <script type="text/javascript">
+    $( document ).ready( fGenerateIDCard() );
+  </script>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>

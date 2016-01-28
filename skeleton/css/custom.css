@@ -1,0 +1,98 @@
+#pageHeader {
+  color: white;
+  background: black;
+}
+
+#pageHeader h5 {
+  padding: 1em 0 1em 2em;
+  margin-bottom: 0;
+}
+
+#topSeparator {
+  background: url(../images/bg_tile.png) repeat;
+  height: 4rem;
+}
+
+#idContainer {
+  padding: 1em 0em 1em 0em;
+  background: url(../images/bg_tile.png) repeat;
+}
+
+
+#idCard {
+  width: 40%;
+  margin: auto;
+  overflow: hidden;
+  background: white;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+#IDIllustration img {
+  position: absolute;
+
+}
+#IDCollar {
+  z-index: 50;
+}
+
+#IDEyes {
+  z-index: 20;
+}
+
+#IDHead {
+  z-index: 10;
+}
+
+#IDJawline {
+  z-index: 0;
+}
+
+#IDMouth {
+  z-index: 40;
+}
+
+#IDNose {
+  z-index: 30;
+}
+
+#IDAcc {
+  z-index: 60;
+}
+
+#IDIllustration {
+  width: 200px;
+  height: 255px;
+  background: #E6E6E6;
+  float: left;
+}
+
+#IDIndustryBox {
+  font-size: 0.7em;
+  float:right;
+  clear: right;
+  text-align: right;
+}
+
+#IDNameBox {
+  font-size: 2em;
+  color: #FF0000;
+  float: right;
+  clear: right;
+  text-align: right;
+}
+
+#IDAgeBox  {
+  font-size: 0.9em;
+  float: left;
+  clear: left;
+  text-align: left;
+}
+
+#IDNationalityBox {
+  font-size: 0.9em;
+  float: left;
+  padding-left: 2em;
+  clear:right;
+  text-align: right;
+}
