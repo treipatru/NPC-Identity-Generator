@@ -41,7 +41,8 @@
               </div>
 
               <div id="IDNameBox">
-                <p id="IDFullName"></p>
+                <p id="IDFirstName"></p>
+                <p id="IDLastName"></p>
               </div>
 
               <div id="IDAgeBox">
@@ -53,12 +54,12 @@
               </div>
 
             </div>
-        </div>
+            <div id="generateButtonContainer">
+            <button id="generateButton" type="button">Generate!</button>
+          </div>
         </div>
 
-      <div class="section" id="generateButtonDiv">
-        <button id="generateButton" type="button">Generate!</button>
-      </div>
+        </div>
 
         <div class="section" id="refreshPeople"><p>Click here to see some fresh faces.</p></div>
 
@@ -109,5 +110,8 @@
         <script src="js/datasource.js"></script>
         <script src="js/main.js"></script>
         <script src="js/idcard.js"></script>
+        <script type="text/javascript">
+          $( document ).ready( fGenerateIDCard() );
+        </script>
     </body>
 </html>

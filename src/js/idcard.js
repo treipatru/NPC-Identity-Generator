@@ -41,12 +41,7 @@ var aIDNose = ["nose01","nose02","nose03","nose04","nose05","nose06","nose07","n
 
 
 function generateIDCardDetails () {
-    person9 = new RandomPerson (nameData);
-        $( "#IDFullName" ).text( person9.sPrsFullName);
-        $( "#IDAgeGender" ).text( person9.iPrsAge + ", " + person9.sPrsGender);
-        $( "#IDNationality" ).text( person9.sPrsType);
-        $( "#IDIndustry" ).text( person9.sPrsJobCat);
-        $( "#IDJobTitle" ).text( person9.sPrsJobTitle);
+
 }
 
 
@@ -62,6 +57,16 @@ function generateIDCardDetails () {
 
 
 function fGenerateIDCard () {
+  //Generate person data using RandomPerson
+  person9 = new RandomPerson (nameData);
+      $( "#IDFirstName" ).text( person9.sPrsFirstName);
+      $( "#IDLastName" ).text( person9.sPrsLastName);
+      $( "#IDAgeGender" ).text( person9.iPrsAge + ", " + person9.sPrsGender);
+      $( "#IDNationality" ).text( person9.sPrsType);
+      $( "#IDIndustry" ).text( person9.sPrsJobCat);
+      $( "#IDJobTitle" ).text( person9.sPrsJobTitle);
+
+  //Select random images
   var collar = randomSelectArray (aIDCollar);
   $("#IDCollar").attr("src", "img/portrait/" + collar + ".png");
   var ears = randomSelectArray (aIDEars);
@@ -89,9 +94,6 @@ function fGenerateIDCard () {
 
 
 
-
-
 $( "#generateButton" ).click(function() {
   fGenerateIDCard ();
-  generateIDCardDetails ();
 });

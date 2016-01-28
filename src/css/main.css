@@ -5,7 +5,7 @@
 /*------------------------------------------------------------------------------
   MAIN STYLE
 ------------------------------------------------------------------------------*/
-/*@import url(http://fonts.googleapis.com/css?family=Cousine:400);*/
+@import url(http://fonts.googleapis.com/css?family=Cousine:400);
 
 html,
 button,
@@ -17,7 +17,7 @@ textarea {
 
 html {
     position: relative;
-/*    font-family: 'Cousine', sans-serif;*/
+    font-family: 'Cousine', sans-serif;
     font-size: 1em;
     line-height: 1.4;
     min-height: 100%;
@@ -86,6 +86,11 @@ body {
   overflow: hidden;
 }
 
+.p {
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
 
 
 
@@ -118,12 +123,13 @@ body {
 }
 
 #IDCard {
-  width: 60%;
-  height: 424px;
+  width: 40%;
+  height: auto;
   margin: auto;
   overflow: hidden;
   background: white;
   padding: 30px;
+  border-radius: 15px;
 }
 
 /*-------------------------------------
@@ -134,45 +140,122 @@ body {
   position: absolute;
 }
 
+
 #IDCollar {
   z-index: 10;
 }
+
 #IDEars {
   z-index: 10;
 }
+
 #IDEyes {
   z-index: 10;
 }
+
 #IDHead {
   z-index: 10;
 }
+
 #IDJawline {
   z-index: 10;
 }
+
 #IDMouth {
   z-index: 10;
 }
+
 #IDNose {
   z-index: 10;
 }
 
+#CharPortrait {
+  width: 200px;
+  height: 255px;
+  background: #E6E6E6;
+  float: left;
+}
+
+#IDIndustryBox {
+  font-size: 0.7em;
+  float:right;
+  clear: right;
+  text-align: right;
+  padding-bottom: 2em;
+}
+
+#IDNameBox {
+  font-size: 2em;
+  color: #FF0000;
+  float: right;
+  clear: right;
+  text-align: right;
+}
+
+#IDAgeBox  {
+  font-size: 0.9em;
+  float: left;
+  clear: left;
+  text-align: left;
+}
+
+#IDNationalityBox {
+  font-size: 0.9em;
+  float: left;
+  padding-left: 2em;
+  clear:right;
+  text-align: right;
+}
 
 /*-------------------------------------
   "GENERATE!"" BUTTON
 -------------------------------------*/
-#generateButtonDiv {
-width: 60%;
+#generateButtonContainer {
+width: 55%;
 clear:both;
 margin: 0 auto;
-padding-bottom: 2em;
-background: url(../img/bg_tile.png) repeat;
 }
 
 #generateButton {
-  width: 95px;
+  width: auto;
   clear: both;
-  margin: auto;
   float:right;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #fe1a00), color-stop(1, #ce0100));
+	background:-moz-linear-gradient(top, #fe1a00 5%, #ce0100 100%);
+	background:-webkit-linear-gradient(top, #fe1a00 5%, #ce0100 100%);
+	background:-o-linear-gradient(top, #fe1a00 5%, #ce0100 100%);
+	background:-ms-linear-gradient(top, #fe1a00 5%, #ce0100 100%);
+	background:linear-gradient(to bottom, #fe1a00 5%, #ce0100 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fe1a00', endColorstr='#ce0100',GradientType=0);
+	background-color:#fe1a00;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #d83526;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #b23e35;
+}
+
+#generateButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ce0100), color-stop(1, #fe1a00));
+	background:-moz-linear-gradient(top, #ce0100 5%, #fe1a00 100%);
+	background:-webkit-linear-gradient(top, #ce0100 5%, #fe1a00 100%);
+	background:-o-linear-gradient(top, #ce0100 5%, #fe1a00 100%);
+	background:-ms-linear-gradient(top, #ce0100 5%, #fe1a00 100%);
+	background:linear-gradient(to bottom, #ce0100 5%, #fe1a00 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ce0100', endColorstr='#fe1a00',GradientType=0);
+	background-color:#ce0100;
+}
+#generateButton:active {
+	position:relative;
+	top:1px;
 }
 
 
