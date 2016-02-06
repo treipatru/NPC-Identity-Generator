@@ -1,6 +1,10 @@
 #pageHeader {
-  color: white;
-  background: black;
+  color: #FFFFFF;
+  background: #000000;
+}
+
+.p {
+  padding: 0;
 }
 
 #pageHeader h5 {
@@ -9,90 +13,109 @@
 }
 
 #topSeparator {
-  background: url(../images/bg_tile.png) repeat;
   height: 4rem;
 }
 
 #idContainer {
   padding: 1em 0em 1em 0em;
-  background: url(../images/bg_tile.png) repeat;
 }
 
 
 #idCard {
-  width: 40%;
   margin: auto;
   overflow: hidden;
-  background: white;
-  padding: 30px;
-  border-radius: 5px;
+  background: #FFFFFF;
 }
 
 #IDIllustration img {
   position: absolute;
-
-}
-#IDCollar {
-  z-index: 50;
 }
 
-#IDEyes {
-  z-index: 20;
-}
-
-#IDHead {
-  z-index: 10;
-}
-
-#IDJawline {
-  z-index: 0;
-}
-
-#IDMouth {
-  z-index: 40;
-}
-
-#IDNose {
-  z-index: 30;
-}
-
-#IDAcc {
-  z-index: 60;
-}
+#IDCollar   {z-index: 50;}
+#IDEyes     {z-index: 20;}
+#IDHead     {z-index: 10;}
+#IDJawline  {z-index: 0;}
+#IDMouth    {z-index: 40;}
+#IDNose     {z-index: 30;}
+#IDAcc      {z-index: 60;}
 
 #IDIllustration {
   width: 200px;
   height: 255px;
-  background: #E6E6E6;
-  float: left;
+  background: #FFFFFF;
+  margin: auto;
+  clear:both;
 }
 
 #IDIndustryBox {
   font-size: 0.7em;
-  float:right;
-  clear: right;
-  text-align: right;
+  clear: both;
+  text-align: center;
 }
 
 #IDNameBox {
   font-size: 2em;
   color: #FF0000;
-  float: right;
-  clear: right;
-  text-align: right;
+  clear: both;
+  text-align: center;
+}
+
+#IDFullname {
+  margin-bottom: 0.2em;
 }
 
 #IDAgeBox  {
   font-size: 0.9em;
-  float: left;
-  clear: left;
-  text-align: left;
+  clear: both;
+  text-align: center;
+}
+
+#IDAgeGender {
+  padding: 0;
+  margin-bottom: 0;
 }
 
 #IDNationalityBox {
-  font-size: 0.9em;
-  float: left;
-  padding-left: 2em;
-  clear:right;
-  text-align: right;
+  font-size: 0.7em;
+  clear:both;
+  text-align: center;
+}
+
+
+.redButton {
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background: #FF0000;
+	border:1px solid #d83526;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 29px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #b23e35;
+}
+.redButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ce0100), color-stop(1, #fe1a00));
+	background:-moz-linear-gradient(top, #ce0100 5%, #fe1a00 100%);
+	background:-webkit-linear-gradient(top, #ce0100 5%, #fe1a00 100%);
+	background:-o-linear-gradient(top, #ce0100 5%, #fe1a00 100%);
+	background:-ms-linear-gradient(top, #ce0100 5%, #fe1a00 100%);
+	background:linear-gradient(to bottom, #ce0100 5%, #fe1a00 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ce0100', endColorstr='#fe1a00',GradientType=0);
+	background-color:#ce0100;
+  color: #000000;
+}
+.redButton:active {
+	position:relative;
+	top:1px;
+}
+
+#generateButton {
+  width: 200px;
+  display: block;
+  margin: auto;
+  overflow: hidden;
+  text-align: center;
 }
