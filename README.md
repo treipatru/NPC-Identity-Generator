@@ -4,7 +4,7 @@ The NPC generator is a game system prototype for generating believable identitie
 
 The data is modeled after real information from the city of Toronto. Being a place with huge diversity it provides interesting results when looking at random individuals on the street.
 
-### How do I get set up? ###
+### How do I set it up? ###
 
 Just download and open in a browser. Alternatively you can see a live version [here](http://www.planet34.org/box/prj/npcgen/).
 
