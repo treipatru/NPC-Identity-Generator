@@ -33,22 +33,6 @@ var aIDAccessory = ["acc01","acc02","acc03","acc04","acc05","acc06","acc07", "ac
 
 
 //#############################################################################
-// Generate a person using main.js
-//#############################################################################
-
-
-
-
-
-function generateIDCardDetails () {
-
-}
-
-
-
-
-
-//#############################################################################
 // Generate a Portrait and write IMAGES to HTML
 //#############################################################################
 
@@ -60,14 +44,21 @@ function fGenerateIDCard () {
   //Generate person data using RandomPerson
   person9 = new RandomPerson (nameData);
 
-      $( "#IDFullname" ).text( person9.sPrsFirstName + " " + person9.sPrsLastName);
-      $( "#IDAgeGender" ).text( person9.iPrsAge + ", " + person9.sPrsGender);
-      $( "#IDNationality" ).text( "Origin: " + person9.sPrsType);
-      $( "#IDIndustry" ).text( "Industry: " + person9.sPrsJobCat);
-      $( "#IDJobTitle" ).text( "Job Title: " + person9.sPrsJobTitle);
+  //Hacky way of trying to avoid kids&elders being displayed due to portraits not matching
+  if (person9.iPrsAge <= 20 || person9.iPrsAge >= 70) {
+    person9 = new RandomPerson (nameData);
+    if (person9.iPrsAge <= 20 || person9.iPrsAge >= 70) {
+      person9 = new RandomPerson (nameData);
+    }
+  }
 
+  $( "#IDFullname" ).text( person9.sPrsFirstName + " " + person9.sPrsLastName);
+  $( "#IDAgeGender" ).text( person9.iPrsAge + ", " + person9.sPrsGender);
+  $( "#IDNationality" ).text( "Origin: " + person9.sPrsType);
+  $( "#IDIndustry" ).text( "Industry: " + person9.sPrsJobCat);
+  $( "#IDJobTitle" ).text( "Job Title: " + person9.sPrsJobTitle);
 
-  //Select random images
+  //Select random images and write to HTML
   var collar = randomSelectArray (aIDCollar);
   $("#IDCollar").attr("src", "images/portrait/" + person9.sPrsGender + "/" + collar + ".png");
   var eyes = randomSelectArray (aIDEyes);
@@ -97,4 +88,5 @@ function fGenerateIDCard () {
 
 $( "#generateButton" ).click(function() {
   fGenerateIDCard ();
+  populateIndividuals();
 });
