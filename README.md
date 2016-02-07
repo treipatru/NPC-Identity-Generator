@@ -21,4 +21,6 @@ Concept and implementation by treipatru. [Say hi!](http://planet34.org)
 Character art by Alexandru Călin.
 
 ### License ###
-The NPC Identity Generator is licensed under an MIT license.
+All contents of the NPC Identity Generator are licensed under an MIT license except for the character art.
+
+Character art (/src/images/portrait/) is copyright Alexandru Călin 2016.
