@@ -1,10 +1,10 @@
+/*----------------------------
+General Layout
+----------------------------*/
+
 #pageHeader {
   color: #FFFFFF;
   background: #000000;
-}
-
-.p {
-  padding: 0;
 }
 
 #pageHeader h5 {
@@ -16,10 +16,14 @@
   height: 4rem;
 }
 
+
+/*----------------------------
+ID Card Properties
+----------------------------*/
+
 #idContainer {
   padding: 1em 0em 1em 0em;
 }
-
 
 #idCard {
   margin: auto;
@@ -81,7 +85,9 @@
   text-align: center;
 }
 
-
+/*----------------------------
+Button Properties
+----------------------------*/
 .redButton {
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -89,10 +95,10 @@
 	border:1px solid #d83526;
 	display:inline-block;
 	cursor:pointer;
-	color:#ffffff;
+	color:#FFFFFF;
 	font-size:15px;
 	font-weight:bold;
-	padding:6px 29px;
+	padding:5px 0px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #b23e35;
 }
@@ -118,4 +124,27 @@
   margin: auto;
   overflow: hidden;
   text-align: center;
+  margin-top: 1em;
+}
+
+/*----------------------------
+Group Sample
+----------------------------*/
+
+#listContainer {
+  margin-top: 1em;
+  padding: 5px;
+}
+
+#listContainer p {
+  font-size: 0.7em;
+  line-height: 1em;
+}
+
+#fullName {
+  font-weight: bold;
+}
+
+#midInfo h6 {
+  margin-bottom: 0.1em;
 }
