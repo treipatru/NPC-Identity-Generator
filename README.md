@@ -18,8 +18,6 @@ You can use this for your projects but please give credit and link to the origin
 
 Concept and implementation by treipatru. [Say hi!](http://planet34.org)
 
-Character art by Alexandru Călin.
-
 ### License ###
 All contents of the NPC Identity Generator are licensed under an MIT license except for the character art.
 
