@@ -1,24 +1,26 @@
-### What is this? ###
+![header](screens/prj-npc-header.jpg)
 
-The NPC generator is a game system prototype for generating believable identities for Non Playing Characters in a game.
+### About
 
-The data is modeled after real information from the city of Toronto. Being a place with huge diversity it provides interesting results when looking at random individuals on the street.
+The NPC Identity Generator is a game system prototype for a sandbox type of game (e.g Grand Theft Auto). It creates _realistic_ identities for citizens of a virtual game world.
 
-### How do I set it up? ###
+The data is _modeled_ after real information from the city of Toronto since they're so kind to make demographic data available. And also because it's a diverse place so it fits the bill for the idea of the prototype.
+First/Last names have been compiled from all over the web according to popularity in their areas of origin.
 
-Just download and open in a browser. Alternatively you can see a live version [here](http://www.planet34.org/box/prj/npcgen/).
+You can see a working demo [here](http://www.planet34.org/box/prj/npcgen/).
 
-It's purely HTML/JS so you don't need any server technology to run it.
+Feel free to use the data (not the artwork) for whatever you want.
 
-### Contribution guidelines ###
+### Screens
 
-You can use this for your projects but please give credit and link to the original.
+![01](screens/prj-npc-screen01.png)
+![02](screens/prj-npc-screen02.png)
+![03](screens/prj-npc-screen03.png)
+![04](screens/prj-npc-screen04.png)
+![05](screens/prj-npc-screen05.png)
+![06](screens/prj-npc-screen06.png)
 
-### Who do I talk to? ###
-
-Concept and implementation by treipatru. [Say hi!](http://planet34.org)
-
-### License ###
-All contents of the NPC Identity Generator are licensed under an MIT license except for the character art.
+### License
+Playtest Data Visualizer is licensed under an  MIT license.
 
 Character art (/src/images/portrait/) is copyright Alexandru Călin 2016.
